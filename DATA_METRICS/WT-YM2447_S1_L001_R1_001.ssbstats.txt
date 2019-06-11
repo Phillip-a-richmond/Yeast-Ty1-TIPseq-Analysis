@@ -1,0 +1,25 @@
+This is cutadapt 1.18 with Python 2.7.14
+Command line parameters: -g ^AACA /project/projects/def-wyeth/RICHMOND/MEASDAY/RAW_DATA/20190129/WT-YM2447_S1_L001_R1_001.fastq.gz --discard-untrimmed -o /project/projects/def-wyeth/RICHMOND/MEASDAY/RAW_DATA/20190129/WT-YM2447_S1_L001_R1_001.fastq.gz.5primetrimmed.fastq
+Processing reads on 1 core in single-end mode ...
+Finished in 95.28 s (12 us/read; 4.83 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               7,670,317
+Reads with adapters:                 7,095,997 (92.5%)
+Reads written (passing filters):     7,095,997 (92.5%)
+
+Total basepairs processed: 1,150,547,550 bp
+Total written (filtered):  1,036,015,562 bp (90.0%)
+
+=== Adapter 1 ===
+
+Sequence: AACA; Type: anchored 5'; Length: 4; Trimmed: 7095997 times.
+
+No. of allowed errors:
+0-4 bp: 0
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+4	7095997	29962.2	0	7095997
+

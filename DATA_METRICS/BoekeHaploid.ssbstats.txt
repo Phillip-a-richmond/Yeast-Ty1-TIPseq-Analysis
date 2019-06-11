@@ -1,0 +1,27 @@
+This is cutadapt 1.18 with Python 2.7.14
+Command line parameters: -g ^TATTCCAACA /project/projects/def-wyeth/RICHMOND/MEASDAY/RAW_DATA/20190129/Boeke/BoekeHaploid.fastq.gz --discard-untrimmed -o /project/projects/def-wyeth/RICHMOND/MEASDAY/RAW_DATA/20190129/Boeke/BoekeHaploid.fastq.gz.5primetrimmed.fastq
+Processing reads on 1 core in single-end mode ...
+Finished in 99.05 s (12 us/read; 4.84 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               7,990,112
+Reads with adapters:                 7,692,443 (96.3%)
+Reads written (passing filters):     7,692,443 (96.3%)
+
+Total basepairs processed:   319,604,480 bp
+Total written (filtered):    230,833,652 bp (72.2%)
+
+=== Adapter 1 ===
+
+Sequence: TATTCCAACA; Type: anchored 5'; Length: 10; Trimmed: 7692443 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10 bp: 1
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+9	67878	30.5	0	0 67878
+10	7617049	7.6	1	7278183 338866
+11	7516	7.6	1	0 7516
+

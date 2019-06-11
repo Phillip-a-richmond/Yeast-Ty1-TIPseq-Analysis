@@ -1,0 +1,67 @@
+This is cutadapt 1.18 with Python 2.7.14
+Command line parameters: -a TAGTCCCTTAAGCGGAGCCCTATAG -m 20 /project/projects/def-wyeth/RICHMOND/MEASDAY/RAW_DATA/20190129/Boeke/BoekeHaploid.fastq.gz.5primetrimmed.fastq -o /project/projects/def-wyeth/RICHMOND/MEASDAY/RAW_DATA/20190129/Boeke/BoekeHaploid.fastq.gz.5primetrimmed.3primetrimmed.fastq
+Processing reads on 1 core in single-end mode ...
+Finished in 80.20 s (10 us/read; 5.75 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               7,692,443
+Reads with adapters:                 1,635,838 (21.3%)
+Reads that were too short:           1,111,594 (14.5%)
+Reads written (passing filters):     6,580,849 (85.5%)
+
+Total basepairs processed:   230,833,652 bp
+Total written (filtered):    194,608,504 bp (84.3%)
+
+=== Adapter 1 ===
+
+Sequence: TAGTCCCTTAAGCGGAGCCCTATAG; Type: regular 3'; Length: 25; Trimmed: 1635838 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-25 bp: 2
+
+Bases preceding removed adapters:
+  A: 2.5%
+  C: 5.4%
+  G: 1.6%
+  T: 80.7%
+  none/other: 9.8%
+WARNING:
+    The adapter is preceded by "T" extremely often.
+    The provided adapter sequence could be incomplete at its 3' end.
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	175633	120194.4	0	175633
+4	82490	30048.6	0	82490
+5	41881	7512.2	0	41881
+6	31507	1878.0	0	31507
+7	51887	469.5	0	51887
+8	57225	117.4	0	57225
+9	44651	29.3	0	44096 555
+10	38676	7.3	1	35974 2702
+11	51109	1.8	1	47201 3908
+12	32801	0.5	1	30365 2436
+13	44350	0.1	1	39286 5064
+14	34560	0.0	1	31348 3212
+15	30221	0.0	1	26940 3281
+16	59672	0.0	1	53460 6212
+17	42730	0.0	1	38313 4417
+18	33672	0.0	1	29551 4099 22
+19	72500	0.0	1	64248 7987 265
+20	73749	0.0	2	63706 8064 1979
+21	28992	0.0	2	25190 2972 830
+22	31365	0.0	2	27316 3287 762
+23	47585	0.0	2	41169 5425 991
+24	12215	0.0	2	10572 1382 261
+25	45196	0.0	2	39066 5210 920
+26	171596	0.0	2	148872 19325 3399
+27	38462	0.0	2	32850 4633 979
+28	48293	0.0	2	41321 5784 1188
+29	52005	0.0	2	45099 5770 1136
+30	155757	0.0	2	1089 2822 151846
+31	5058	0.0	2	0 353 4705
+
+WARNING:
+    One or more of your adapter sequences may be incomplete.
+    Please see the detailed output above.
