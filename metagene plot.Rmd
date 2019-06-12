@@ -1,0 +1,69 @@
+---
+title: "metagene plots"
+author: "michelle kang"
+date: "April 9, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(metagene2)
+
+```
+
+
+```{r}
+png("Merged_YM2450_YM2447dupremoved_plot.png", width = 2500, height = 400)
+WT_YM2447_upstream_pos <- metagene2$new(regions = c("upstreamTRNApos.bed","upstreamTRNAneg.bed","downstreamTRNApos.bed","downstreamTRNAneg.bed"), bam_files = c("WT-YM2447_S1_L001_R1_001_dupremoved.sorted.bam", "Mutant-YM2450_S2_L001_R1_001_dupremoved.sorted.bam"),extend_reads = 20)
+WT_YM2447_upstream_pos$produce_metagene(bin_count = 500)
+WT_YM2447_upstream_pos$group_coverages(normalization="RPM")
+WT_YM2447_upstream_pos$plot(title = "Merged YM2450 YM2447 dupremoved", facet_by=~region_name, group_by="design")
+dev.off()
+
+```
+
+```{r}
+png("Rpc53WT_S1_dupremoved.png", width = 3000, height = 400)
+Rpc53WT_S1_dupremoved_upstream_neg <- metagene2$new(regions = c("upstreamTRNApos.bed","upstreamTRNAneg.bed", "downstreamTRNApos.bed","downstreamTRNAneg.bed"), bam_files = "Rpc53WT_S1_L001_R1_001_dupremoved.sorted.bam",extend_reads = 20)
+Rpc53WT_S1_dupremoved_upstream_neg $produce_metagene(bin_count = 500)
+Rpc53WT_S1_dupremoved_upstream_neg$group_coverages(normalization="RPM")
+Rpc53WT_S1_dupremoved_upstream_neg$plot(title = "Rpc53WT_S1_dupremoved",facet_by=~region_name, group_by="design")
+dev.off()
+```
+
+```{r}
+png("Merged_YSC178_YSC180_185_189dupremoved.png", width = 3000, height = 700)
+YSC178_dupremoved_upstream_pos <- metagene2$new(regions = c("upstreamTRNApos.bed","upstreamTRNAneg.bed", "downstreamTRNApos.bed","downstreamTRNAneg.bed"), bam_files = c("YSC178_S4_L001_R1_001_dupremoved.sorted.bam", "YSC180_S1_L001_R1_001_dupremoved.sorted.bam", "YSC185_S2_L001_R1_001_dupremoved.sorted.bam","YSC189_S3_L001_R1_001_dupremoved.sorted.bam"),extend_reads = 20)
+YSC178_dupremoved_upstream_pos$produce_metagene(bin_count = 500)
+YSC178_dupremoved_upstream_pos$group_coverages(normalization="RPM")
+YSC178_dupremoved_upstream_pos$plot(title = "Merged_YSC178_YSC180_185_189dupremoved", facet_by=~region_name, group_by="design")
+dev.off()
+```
+
+
+```{r}
+png("Merged_YSC178_YSC180_185_189dupremoved.unique.png", width = 3000, height = 700)
+YSC178_dupremoved_upstream_pos <- metagene2$new(regions = c("upstreamTRNApos.bed","upstreamTRNAneg.bed", "downstreamTRNApos.bed","downstreamTRNAneg.bed"), bam_files = c("YSC178_S4_L001_R1_001_dupremoved_uniq.sorted.bam", "YSC180_S1_L001_R1_001_dupremoved_uniq.sorted.bam", "YSC185_S2_L001_R1_001_dupremoved_uniq.sorted.bam","YSC189_S3_L001_R1_001_dupremoved_uniq.sorted.bam"),extend_reads = 20)
+YSC178_dupremoved_upstream_pos$produce_metagene(bin_count = 500)
+YSC178_dupremoved_upstream_pos$group_coverages(normalization="RPM")
+YSC178_dupremoved_upstream_pos$plot(title = "Merged_YSC178_YSC180_185_189dupremoved unique", facet_by=~region_name, group_by="design")
+dev.off()
+```
+
+```{r}
+png("Rpc53WT_S1_dupremoved.uniq.png", width = 3000, height = 700)
+Rpc53WT_S1_dupremoved_upstream_neg <- metagene2$new(regions = c("upstreamTRNApos.bed","upstreamTRNAneg.bed", "downstreamTRNApos.bed","downstreamTRNAneg.bed"), bam_files = "Rpc53WT_S1_L001_R1_001_dupremoved_uniq.sorted.bam",extend_reads = 20)
+Rpc53WT_S1_dupremoved_upstream_neg $produce_metagene(bin_count = 500)
+Rpc53WT_S1_dupremoved_upstream_neg$group_coverages(normalization="RPM")
+Rpc53WT_S1_dupremoved_upstream_neg$plot(title = "Rpc53WT_S1_dupremoved uniq",facet_by=~region_name, group_by="design")
+dev.off()
+```
+```{r}
+png("Merged_YM2450_YM2447dupremoved_uniq.png", width = 2500, height = 400)
+WT_YM2447_upstream_pos <- metagene2$new(regions = c("upstreamTRNApos.bed","upstreamTRNAneg.bed","downstreamTRNApos.bed","downstreamTRNAneg.bed"), bam_files = c("WT-YM2447_S1_L001_R1_001_dupremoved_uniq.sorted.bam", "Mutant-YM2450_S2_L001_R1_001_dupremoved_uniq.sorted.bam"),extend_reads = 20)
+WT_YM2447_upstream_pos$produce_metagene(bin_count = 500)
+WT_YM2447_upstream_pos$group_coverages(normalization="RPM")
+WT_YM2447_upstream_pos$plot(title = "Merged YM2450 YM2447 dupremoved uniq", facet_by=~region_name, group_by="design")
+dev.off()
+```
